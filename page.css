@@ -1,0 +1,255 @@
+section{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.profile-container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 7vh;
+}
+
+.profile-picture-container{
+  width: 40%;
+  max-width: 480px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 3px 8px 20px rgba(0,0,0,0.6); /* ombra morbida */
+  margin-top: 40px;
+  margin-bottom: 6vw;
+   /* aggiungiamo l’animazione */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+}
+
+.profile-picture-container:hover,
+.profile-picture-container:active{
+  transform: scale(1.06);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.45);
+}
+
+.profile-picture{
+  width: 120%;
+  height: 120%;    /* mantiene le proporzioni */
+  object-fit: cover;
+  display: block;
+}
+
+.profile-name{
+  margin-top: 2%;
+  color: white;
+  font-family: Roboto;
+  font-weight: 700;
+  text-align: center;
+  font-size: clamp(1.5rem, 8vw, 6rem);
+  line-height: 1.1; /* riduce lo spazio tra le righe */
+}
+
+.profile-name span{
+  font-family: Silkscreen;
+  font-weight: 700;
+  font-size: clamp(1.5rem, 10vw, 8rem);
+  color: #FFD700; /* giallo neon */
+  text-shadow:
+    -0.07em -0.07em 0 #000,  
+     0.07em -0.07em 0 #000,  
+    -0.07em  0.07em 0 #000,  
+     0.1em  0.1em 0 #000; 
+
+  display: block;
+}
+
+.tags {
+  display: flex;
+  gap: 1rem; /* spazio tra i bottoni */
+  align-items: center;
+  justify-content: center;
+  margin-top: 7vw;
+}
+
+/* Sotto i 500px li forzi a prendere tutta la riga */
+@media (max-width: 500px) {
+  .tags {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.tag-text-container{
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: white;
+  font-size: clamp(.75rem, 3vw, 2rem);   /* testo fluido */
+  white-space: nowrap;
+  padding: clamp(0.5em, 1vw, 1em)         /* verticale */
+           clamp(1.5em, 2vw, 2.5em);         /* orizzontale: si riduce su mobile */
+  background: #ffae00;
+  border-radius: 4vw;
+  box-shadow: 1px 2px 15px rgba(0,0,0,0.4); /* ombra morbida */
+}
+
+.profile-description{
+  text-align: center; /* il testo va centrato */
+  max-width: 80vw;
+  font-size: clamp(.75rem, 3.5vw, 2rem);   /* testo fluido */
+  margin-top: 7vw;
+  margin-bottom: 7vw;
+  font-family: Roboto;
+  color: white;
+}
+
+
+.social-icons{
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.linkedin-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1/1;
+  width: clamp(30px, 10vw, 65px); /* cresce fluido tra 30px e 120px */
+  background: linear-gradient(135deg, #0A66C2, #00C6FF);
+  border-radius: 30%;
+  box-shadow: 1px 2px 15px rgba(0,0,0,0.4);
+  cursor: pointer;
+}
+
+.instagram-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1/1;
+  width: clamp(30px, 10vw, 65px); /* cresce fluido tra 30px e 120px */
+  background: linear-gradient(135deg, #f77737, #e1306c, #c13584);
+  border-radius: 30%;
+  box-shadow: 1px 2px 15px rgba(0,0,0,0.4);
+  cursor: pointer;
+}
+
+.social-icons img{
+  object-fit: contain;
+  width: 70%;
+  height: auto;
+}
+
+/* PROJECT SECTION */
+.project-grid{
+  margin-bottom: 5vh;
+}
+
+.project-section-title{
+  margin-top: 7vh;
+  text-align: center;
+  color: white;
+  font-family: Roboto;
+  font-size: clamp(1.5rem, 8vw, 6rem);
+  font-weight: 700;
+  margin-bottom: clamp(1.5rem, 5vw, 2rem);
+}
+
+.project-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-container{
+  margin-top: 2.5vw;
+  margin-bottom: 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60vw;
+}
+
+.project-title{
+  color: white;
+  font-size: clamp(.75rem, 4.5vw, 2rem); 
+  font-weight: bold;
+}
+
+.project-image{
+  margin-top: 2.5vw;
+  width: 70%;
+  max-width: 40vw;
+  border-radius: 15%;
+  overflow: hidden;
+}
+
+.project-image img{
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.project-description{
+  margin-top: 2.5vw;
+  width: 80%;
+  text-align: center;
+  color: white;
+  font-family: Roboto;
+  font-size: clamp(.75rem, 3.5vw, 2rem); 
+
+}
+
+.divider {
+  border: none;
+  height: 2px;
+  background: #fff;   /* colore linea */
+  width: 70%;         /* lunghezza linea */
+  margin: 2rem auto;  /* spaziatura e centrata */
+  opacity: 0.3;       /* più elegante */
+}
+
+/* FORM */
+#form-title{
+  text-align: center;
+  color: white;
+  font-family: Roboto;
+  font-size: clamp(1.5rem, 8vw, 6rem);
+  font-weight: 700;
+  margin-bottom: clamp(1.5rem, 5vw, 2rem);
+}
+
+.container-form h2{
+  color: white;
+}
+
+.container-form label{
+  color: white;
+}
+
+form {
+  max-width: 600px;   /* limite di larghezza */
+  margin: 0 auto;     /* centra orizzontalmente */
+}
+
+textarea::placeholder,
+input::placeholder
+{
+  font-size: clamp(.75rem, 3.5vw, 2rem); 
+}
+
+/* RESPONSIVE*/
+@media (min-width: 768px) {
+  .profile-description{
+    font-size: clamp(.75rem, 4vw, 2rem);   /* testo fluido */
+  }
+}

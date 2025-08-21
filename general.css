@@ -1,0 +1,6 @@
+body {
+  min-height: 100vh; /* copre sempre l'intera altezza schermo */
+  margin: 0;
+  background: linear-gradient(to bottom, #111, #222); /* arriva fino in fondo */
+  padding-bottom: 50px;
+}

@@ -1,0 +1,77 @@
+@media(min-width: 1000px){
+
+  /* PAGE */
+  .profile-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 5vW;
+    margin-bottom: 10vw;
+  } 
+
+  .profile-picture-container{
+    flex: 1;
+    width: 20%;
+  }
+
+  .profile-content-container{
+    flex: 1;
+    padding-top: 3vw;
+  }
+
+  .profile-name{
+    font-size: clamp(1.5rem, 6vw, 3rem);
+  }
+
+  .profile-name span{
+    font-size: clamp(1.5rem, 10vw, 4rem);
+  }
+
+  .tags{
+    margin-top: 4vw;
+  }
+
+  .tag-text-container{
+      font-size: clamp(.75rem, 1.3vw, 1rem);   /* testo fluido */
+  }
+
+  .profile-description{
+    font-size: clamp(.75rem, 2vw, 1.5rem);   /* testo fluido */
+    margin-top: 4vw;
+    margin-bottom: 3vw;
+  }
+
+  /* PROJECTS SECTION*/
+  .project-section-title{
+    font-size: clamp(1.5rem, 6vw, 3rem);
+  }
+  .project-section{
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .project-container{
+    flex: 1;
+  }
+
+  .project-image{
+    max-width: 300px;
+  }
+
+  .project-description{
+    font-size: clamp(.75rem, 2vw, 1.5rem);
+  }
+
+  /* FORM */
+  #form-title{
+    font-size: clamp(1.5rem, 6vw, 3rem);
+  }
+
+  textarea::placeholder,
+  input::placeholder
+  {
+    font-size: clamp(.75rem, 2vw, 1.5rem); 
+  }
+}
