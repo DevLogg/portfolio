@@ -12,7 +12,7 @@ section{
 }
 
 .profile-picture-container{
-  width: 40%;
+  width: 50%;
   max-width: 480px;
   aspect-ratio: 1/1;
   border-radius: 50%;
@@ -47,14 +47,14 @@ section{
   font-family: Roboto;
   font-weight: 700;
   text-align: center;
-  font-size: clamp(1.5rem, 8vw, 6rem);
+  font-size: clamp(1.5rem, 7vw, 3rem);
   line-height: 1.1; /* riduce lo spazio tra le righe */
 }
 
 .profile-name span{
   font-family: Silkscreen;
   font-weight: 700;
-  font-size: clamp(1.5rem, 10vw, 8rem);
+  font-size: clamp(1.5rem, 10vw, 4.5rem);
   color: #FFD700; /* giallo neon */
   text-shadow:
     -0.07em -0.07em 0 #000,  
@@ -90,7 +90,7 @@ section{
   text-transform: uppercase;
   font-weight: 700;
   color: white;
-  font-size: clamp(.75rem, 3vw, 2rem);   /* testo fluido */
+  font-size: clamp(.75rem, 2.7vw, 1.3rem);   /* testo fluido */
   white-space: nowrap;
   padding: clamp(0.5em, 1vw, 1em)         /* verticale */
            clamp(1.5em, 2vw, 2.5em);         /* orizzontale: si riduce su mobile */
@@ -101,8 +101,9 @@ section{
 
 .profile-description{
   text-align: center; /* il testo va centrato */
-  max-width: 80vw;
-  font-size: clamp(.75rem, 3.5vw, 2rem);   /* testo fluido */
+  padding-left: 5%;
+  padding-right: 5%;
+  font-size: clamp(.75rem, 3.5vw, 1.3rem);   /* testo fluido */
   margin-top: 7vw;
   margin-bottom: 7vw;
   font-family: Roboto;
@@ -117,8 +118,7 @@ section{
   align-items: center;
 }
 
-
-.linkedin-icon{
+.linkedin-icon a{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -128,9 +128,15 @@ section{
   border-radius: 30%;
   box-shadow: 1px 2px 15px rgba(0,0,0,0.4);
   cursor: pointer;
+  transition: transform 0.15s;
 }
 
-.instagram-icon{
+.linkedin-icon a:hover,
+.linkedin-icon a:active{
+  transform: scale(1.15);
+}
+
+.instagram-icon a{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -140,6 +146,12 @@ section{
   border-radius: 30%;
   box-shadow: 1px 2px 15px rgba(0,0,0,0.4);
   cursor: pointer;
+  transition: transform 0.15s;
+}
+
+.instagram-icon a:hover,
+.instagram-icon a:active{
+  transform: scale(1.15);
 }
 
 .social-icons img{
@@ -156,11 +168,11 @@ section{
 .project-section-title{
   margin-top: 7vh;
   text-align: center;
-  color: white;
-  font-family: Roboto;
-  font-size: clamp(1.5rem, 8vw, 6rem);
+  font-family: Fira Mono;
+  font-size: clamp(1.5rem, 8vw, 4rem);
   font-weight: 700;
   margin-bottom: clamp(1.5rem, 5vw, 2rem);
+  color: #FFD700;
 }
 
 .project-section{
@@ -190,6 +202,14 @@ section{
   max-width: 40vw;
   border-radius: 15%;
   overflow: hidden;
+  transition: transform 0.15s;
+  cursor: pointer;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.project-image:hover{
+  transform: scale(1.06);
+  box-shadow: 5px 15px 20px rgba(0, 0, 0, 0.5);
 }
 
 .project-image img{
@@ -205,7 +225,7 @@ section{
   text-align: center;
   color: white;
   font-family: Roboto;
-  font-size: clamp(.75rem, 3.5vw, 2rem); 
+  font-size: clamp(.75rem, 3.5vw, 1.4rem); 
 
 }
 
@@ -221,9 +241,9 @@ section{
 /* FORM */
 #form-title{
   text-align: center;
-  color: white;
-  font-family: Roboto;
-  font-size: clamp(1.5rem, 8vw, 6rem);
+  color: #FFD700;
+  font-family: Fira Mono;
+  font-size: clamp(1.5rem, 8vw, 4rem);
   font-weight: 700;
   margin-bottom: clamp(1.5rem, 5vw, 2rem);
 }
@@ -244,7 +264,23 @@ form {
 textarea::placeholder,
 input::placeholder
 {
-  font-size: clamp(.75rem, 3.5vw, 2rem); 
+  font-size: clamp(.75rem, 3.5vw, 1.3rem); 
+}
+
+footer{
+  margin-top: 2vw;
+}
+
+footer p{
+  font-size: 0.9rem; 
+  color: #aaa;
+}
+
+#send-button{
+  border-radius: 2rem;
+  font-family: Roboto;
+  font-weight: 500;
+
 }
 
 /* RESPONSIVE*/

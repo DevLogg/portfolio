@@ -7,7 +7,7 @@
     align-items: center; 
     justify-content: center;
     gap: 4rem;
-    margin-top: 5vW;
+    margin-top: 6vh;
     margin-bottom: 10vw;
   } 
 
@@ -19,6 +19,7 @@
   .profile-content-container{
     flex: 1;
     padding-top: 3vw;
+    padding-bottom: 3vw;
   }
 
   .profile-name{
@@ -61,7 +62,7 @@
   }
 
   .project-description{
-    font-size: clamp(.75rem, 2vw, 1.5rem);
+    font-size: clamp(.75rem, 2vw, 1.3rem);
   }
 
   /* FORM */
@@ -72,6 +73,6 @@
   textarea::placeholder,
   input::placeholder
   {
-    font-size: clamp(.75rem, 2vw, 1.5rem); 
+    font-size: clamp(.75rem, 2vw, 1.2rem); 
   }
 }

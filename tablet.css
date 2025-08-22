@@ -1,0 +1,29 @@
+@media (min-width: 768px) and (max-width: 999px) {
+  .profile-name{
+    font-size: clamp(1.5rem, 6vw, 4rem);
+  }
+
+  .profile-name span{
+    font-size: clamp(1.5rem, 10vw, 5rem);
+  }
+
+  .profile-description{
+    font-size: clamp(.75rem, 2.5vw, 1.6rem);   /* testo fluido */
+  }
+
+  .project-image{
+    max-width: 350px;
+  }
+
+  .project-description{
+    font-size: clamp(.75rem, 2.5vw, 3rem);
+  }
+
+  /* FORM */
+  textarea::placeholder,
+  input::placeholder
+  {
+    font-size: clamp(.75rem, 2.2vw, 1.4rem); 
+  }
+}
+  /* qui dentro scrivi le regole */
