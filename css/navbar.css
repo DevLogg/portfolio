@@ -1,0 +1,32 @@
+.navbar-toggler {
+  border: none !important;          /* niente bordo */
+  opacity: 1;
+  transition: opacity 0.15s;
+}
+
+.navbar-toggler:hover{
+  opacity: 0.5;      /* niente contorno al click */
+}
+
+.navbar-toggler:focus{
+  box-shadow: none;      /* niente contorno al click */
+}
+
+.navbar-nav {
+  text-align: center;
+  width: 100%;  /* occupa tutta la larghezza */
+}
+
+.navbar-brand {
+  color: #FFD700 !important; /* giallo oro */
+  padding: 2%;
+  font-weight: 700;
+  font-family: Silkscreen;
+  font-size: clamp(1rem, 4vw, 2rem);
+  cursor: pointer;
+}
+
+.menu-icon{
+  width: clamp(1rem, 4vw, 3rem);
+  height: clamp(1rem, 4vw, 3rem);
+}

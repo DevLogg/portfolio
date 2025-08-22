@@ -12,7 +12,7 @@ section{
 }
 
 .profile-picture-container{
-  width: 50%;
+  width: 50vw;
   max-width: 480px;
   aspect-ratio: 1/1;
   border-radius: 50%;
@@ -21,7 +21,7 @@ section{
   align-items: center;
   justify-content: center;
   box-shadow: 3px 8px 20px rgba(0,0,0,0.6); /* ombra morbida */
-  margin-top: 40px;
+  margin-top: 7vw;
   margin-bottom: 6vw;
    /* aggiungiamo l’animazione */
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -36,7 +36,6 @@ section{
 
 .profile-picture{
   width: 120%;
-  height: 120%;    /* mantiene le proporzioni */
   object-fit: cover;
   display: block;
 }
@@ -47,14 +46,14 @@ section{
   font-family: Roboto;
   font-weight: 700;
   text-align: center;
-  font-size: clamp(1.5rem, 7vw, 3rem);
+  font-size: clamp(1.5rem, 6vw, 3.5rem);
   line-height: 1.1; /* riduce lo spazio tra le righe */
 }
 
 .profile-name span{
   font-family: Silkscreen;
   font-weight: 700;
-  font-size: clamp(1.5rem, 10vw, 4.5rem);
+  font-size: clamp(1.5rem, 10vw, 5.5rem);
   color: #FFD700; /* giallo neon */
   text-shadow:
     -0.07em -0.07em 0 #000,  
@@ -97,23 +96,28 @@ section{
   background: #ffae00;
   border-radius: 4vw;
   box-shadow: 1px 2px 15px rgba(0,0,0,0.4); /* ombra morbida */
+  transition: transform 0.15s;
+}
+
+.tag-text-container:hover{
+  transform: scale(1.03);
+  background-color: #FFD700;
 }
 
 .profile-description{
   text-align: center; /* il testo va centrato */
   padding-left: 5%;
   padding-right: 5%;
-  font-size: clamp(.75rem, 3.5vw, 1.3rem);   /* testo fluido */
+  font-size: clamp(.9rem, 2.5vw, 1.6rem);   /* testo fluido */
   margin-top: 7vw;
   margin-bottom: 7vw;
   font-family: Roboto;
   color: white;
 }
 
-
 .social-icons{
   display: flex;
-  gap: 2.5rem;
+  gap: 3.5vw;
   justify-content: center;
   align-items: center;
 }
@@ -198,8 +202,9 @@ section{
 
 .project-image{
   margin-top: 2.5vw;
-  width: 70%;
-  max-width: 40vw;
+  margin-bottom: clamp(0.5rem, 2.5vw, 0.8rem);
+  width: 60%;
+  max-width: 300px;
   border-radius: 15%;
   overflow: hidden;
   transition: transform 0.15s;
@@ -225,7 +230,7 @@ section{
   text-align: center;
   color: white;
   font-family: Roboto;
-  font-size: clamp(.75rem, 3.5vw, 1.4rem); 
+  font-size: clamp(.9rem, 2.5vw, 1.4rem); 
 
 }
 
@@ -264,7 +269,7 @@ form {
 textarea::placeholder,
 input::placeholder
 {
-  font-size: clamp(.75rem, 3.5vw, 1.3rem); 
+  font-size: clamp(1rem, 2.2vw, 1.4rem);  
 }
 
 footer{
@@ -283,9 +288,3 @@ footer p{
 
 }
 
-/* RESPONSIVE*/
-@media (min-width: 768px) {
-  .profile-description{
-    font-size: clamp(.75rem, 4vw, 2rem);   /* testo fluido */
-  }
-}
